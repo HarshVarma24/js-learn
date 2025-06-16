@@ -38,3 +38,29 @@ const myFunction = function(){
 myFunction();
 
 console.log(typeof heros);
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//stack vs heap memory
+
+// JavaScript uses two types of memory allocation: stack and heap
+// stack memory is used for primitive data types, while heap memory is used for reference data types
+// in stack we get a copy of the value, while in heap we get a reference to the value
+// stack memory is faster than heap memory
+
+let myName = "Hitesh";// stack memory
+let myName2 = myName; // stack memory, copy of the value
+myName2  = "Harsh"
+console.log(myName);// Hitesh
+// myName2 is a copy of myName, so changing myName2 does not change myName
+console.log(myName2); 
+
+let user1= {
+    email: "user@harsh.com",
+    upiId: "user@upi",
+}
+let user2 = user1; // heap memory, reference to the value
+
+user2.email = "user2@aarav.com"; // changing the value of user2 will also change the value of user1
+console.log(user1.email);  // user1.email is also changed to user2.email
+console.log(user2.email);  // user2.email is changed to user1.email
