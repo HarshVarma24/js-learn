@@ -15,4 +15,8 @@ console.log(accountId);
 
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState]);
 
+//IMP
+// Reassigning is fine with both let and var.
+// Re-declaring is allowed only with var in the same scope.
+
 

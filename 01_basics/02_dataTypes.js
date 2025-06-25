@@ -12,3 +12,5 @@ let isLoggedIn = true
 console/log(typeof "harsh") // string
 console.log(typeof null) // object (this is a bug in JavaScript)
 console.log(typeof undefined) // undefined
+
+
