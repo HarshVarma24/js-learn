@@ -52,3 +52,77 @@ Jsuser.greeting_name = function(){
     console.log(`Hello ${this.name}`) // this will print the name of the user //referring the name.
 }
 console.log(Jsuser.greeting_name()) // will print "Hello Varma ji"
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Object Constructor
+const tinderUser = new Object(); // this is an empty object
+console.log(tinderUser) // will print {}
+
+tinderUser.name = "Amit";
+tinderUser.age = 25;
+tinderUser.id = "amit123";
+
+console.log(tinderUser) // will print { name: 'Amit', age: 25, id: 'amit123' }
+
+const regularUser = {
+    email: "amit123@gmail.com",
+    fullname: {
+        firstname: "Amit",
+        lastname: "Kumar"
+    }
+}
+
+console.log(regularUser) // will print the object with email and fullname
+console.log(regularUser.fullname.firstname) // will print "Amit"
+console.log(regularUser.fullname.lastname) // will print "Kumar"
+
+const obj1 = {1 : "a", 2: "b", 3: "c"}; // this is an object with keys as numbers
+const obj2 = {4: "d", 5: "e", 6: "f"}; // this is another object with keys as numbers
+//const obj3 = {obj1, obj2}
+//const obj3 = Object.assign({}, obj1, obj2); // this will merge obj1 and obj2 into obj3 
+//{} - target object and obj1, obj2 - source objects
+const obj3 = {...obj1, ...obj2}; // this will also merge obj1 and obj2 into obj3 using spread operator
+console.log(obj3) // will print the object with obj1 and obj2 as keys
+
+const user = [
+    {
+    id : 1,
+    email : "harsh42@gmail.com"
+    }
+]
+
+//user[1].email
+console.log(tinderUser)
+
+console.log(Object.keys(tinderUser)) // will print the keys of the object
+console.log(Object.values(tinderUser)) // will print the values of the object
+console.log(Object.entries(tinderUser)) // will print the key-value pairs of the object as an array of arrays
+console.log(tinderUser.hasOwnProperty("name")) // will print true if the object has the key "name", else false
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//destructuring an object
+ const course = {
+    courseName: "JavaScript",
+    price: 999,
+    teacher: "Hitesh",
+ }
+
+ course.teacher
+ const{teacher} = course; // this will extract the teacher key from the course object
+ console.log(teacher) // will print "Hitesh"
+ 
+ //JSON FORMAT
+//  {
+//     "name": "Harsh",
+//     "age": 20,  
+//     "isLoggedIn": true,
+//  }
+
+//array json format
+// [
+//     {},
+//     {},
+// ]
+// JSON is a string format, not an object. It is used to send data between server and client.
